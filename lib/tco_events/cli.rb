@@ -2,27 +2,14 @@ class TcoEvents::CLI
   
   def call
     puts "Welcome to Tuolumne County Events Page!"
-    # months
+    list_events
     month_events
     goodbye
   end
   
-  # def months
-  #   puts <<-DOC 
-  #   01. Januaray
-  #   02. Feburary
-  #   03. March
-  #   04. April
-  #   05. May 
-  #   06. June 
-  #   07. July
-  #   08. August 
-  #   09. September 
-  #   10. October 
-  #   11. November 
-  #   12. December
-  #   DOC
-  # end
+  def list_events
+    @events = TcoEvents::Event.annual
+  end
   
     def month_events
       user_input = nil

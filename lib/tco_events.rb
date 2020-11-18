@@ -5,4 +5,5 @@ module TcoEvents
   # Your code goes here...
 end
 
+require "./lib/tco_events/event"
 require "./lib/tco_events/cli"
