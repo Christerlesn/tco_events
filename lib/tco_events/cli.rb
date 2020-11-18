@@ -2,7 +2,6 @@ class TcoEvents::CLI
   
   def call
     puts "Welcome to Tuolumne County Events Page!"
-    list_events
     month_events
     goodbye
   end
@@ -14,7 +13,7 @@ class TcoEvents::CLI
     def month_events
       user_input = nil
       while user_input != "exit"
-        puts "Type in the month you would like to see events for in mm format(i.e: 01), or type exit:"
+        puts "Type in the month you would like to see events for in mm format(i.e: 01),or type annual events for all events or type exit:"
         user_input = gets.strip.downcase
       case user_input
       when "01"
@@ -77,6 +76,8 @@ class TcoEvents::CLI
         1. event 1
         2. event 2"
         day
+      when "annual events"
+        list_events
       end
     end
   end
