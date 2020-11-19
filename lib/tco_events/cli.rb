@@ -13,7 +13,7 @@ class TcoEvents::CLI
     def month_events
       user_input = nil
       while user_input != "exit"
-        puts "Type in the month you would like to see events for in mm format(i.e: 01),or type annual events for all events or type exit:"
+        puts "Type in the month you would like to see events for in mm format(i.e: 01),or type 'annual events' for all events or type 'exit':"
         user_input = gets.strip.downcase
       case user_input
       when "01"
@@ -85,7 +85,7 @@ class TcoEvents::CLI
     def day
       input = nil 
       while input != "exit"
-        puts "Type in the day you would like to see events for in dd format(i.e: 01), or type exit to return to month menu:"
+        puts "Type in the day you would like to see events for in dd format(i.e: 01), ranging from 01-31, or type exit to return to the main menu:"
         input = gets.strip.downcase
         case input
             when "01"
