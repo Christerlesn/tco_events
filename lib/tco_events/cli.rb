@@ -15,72 +15,85 @@ class TcoEvents::CLI
       while user_input != "exit"
         puts "Type in the month you would like to see events for in mm format(i.e: 01),or type 'annual events' for all events or type 'exit':"
         user_input = gets.strip.downcase
-      case user_input
-      when "01"
-        puts "These are all the events for January:
-        1. event 1
-        2. event 2"
-        day
-      when "02"
-        puts "These are all the events for Feburary:
-        1. event 1
-        2. event 2"
-        day
-      when "03"
-        puts "These are all the events for March:
-        1. event 1
-        2. event 2"
-        day
-      when "04"
-        puts "These are all the events for April:
-        1. event 1
-        2. event 2"
-        day
-      when "05"
-        puts "These are all the events for May:
-        1. event 1
-        2. event 2"
-        day
-      when "06"
-        puts "These are all the events for June:
-        1. event 1
-        2. event 2"
-        day
-      when "07"
-        puts "These are all the events for July:
-        1. event 1
-        2. event 2"
-        day
-      when "08"
-        puts "These are all the events for August:
-        1. event 1
-        2. event 2"
-        day
-      when "09"
-        puts "These are all the events for September:
-        1. event 1
-        2. event 2"
-        day
-      when "10"
-        puts "These are all the events for October:
-        1. event 1
-        2. event 2"
-        day
-      when "11"
-        puts "These are all the events for November:
-        1. event 1
-        2. event 2"
-        day
-      when "12"
-        puts "These are all the events for December:
-        1. event 1
-        2. event 2"
-        day
-      when "annual events"
-        list_events
+        if user_input_to.i > 0
+          puts @events[user_input.to_i-1]
+          day
+        elsif user_input == "annual events"
+          list_events
+        else
+          "Please try again"
+        end
       end
     end
-  end
+          
+          
+          
+  #     case user_input
+  #     when "01"
+  #       puts "These are all the events for January:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "02"
+  #       puts "These are all the events for Feburary:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "03"
+  #       puts "These are all the events for March:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "04"
+  #       puts "These are all the events for April:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "05"
+  #       puts "These are all the events for May:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "06"
+  #       puts "These are all the events for June:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "07"
+  #       puts "These are all the events for July:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "08"
+  #       puts "These are all the events for August:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "09"
+  #       puts "These are all the events for September:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "10"
+  #       puts "These are all the events for October:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "11"
+  #       puts "These are all the events for November:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "12"
+  #       puts "These are all the events for December:
+  #       1. event 1
+  #       2. event 2"
+  #       day
+  #     when "annual events"
+  #       list_events
+  #     end
+  #   end
+  # end
     
     def day
       input = nil 
