@@ -8,17 +8,21 @@ class TcoEvents::CLI
   
   def list_events
     @events = TcoEvents::Event.annual
+    @events.each.with_index(1) do |event, i|
+      puts "#{i}. #{event.month}: #{event.info}. For more information, go to #{event.url}"
+    end
   end
   
     def month_events
-      user_input = nil
-      while user_input != "exit"
+      input = nil
+      while input != "exit"
         puts "Type in the month you would like to see events for in mm format(i.e: 01),or type 'annual events' for all events or type 'exit':"
-        user_input = gets.strip.downcase
-        if user_input.to_i > 0
-          puts @events[user_input.to_i-1]
-          day
-        elsif user_input == "annual events"
+        input = gets.strip.downcase
+        
+        if input.to_i > 0
+          puts @events[input.to_i-1]
+          #day
+        elsif input == "annual events"
           list_events
         else
           "Please try again"

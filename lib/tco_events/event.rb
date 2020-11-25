@@ -3,57 +3,57 @@ class TcoEvents::Event
 
   def self.annual
     #shows all the events for the year
-    puts <<-DOC 
-    These are all the events for the year
-    01. January
-      These are all the events for January:
-        1. event 1
-        2. event 2
-    02. Feburary
-      These are all the events for Feburary:
-        1. event 1
-        2. event 2
-    03. March
-      These are all the events for March:
-        1. event 1
-        2. event 2
-    04. April
-      These are all the events for April:
-        1. event 1
-        2. event 2
-    05. May
-      These are all the events for May:
-        1. event 1
-        2. event 2
-    06. June
-      These are all the events for June:
-        1. event 1
-        2. event 2
-    07. July
-      These are all the events for July:
-        1. event 1
-        2. event 2
-    08. August
-      These are all the events for August:
-        1. event 1
-        2. event 2
-    09. September
-      These are all the events for September:
-        1. event 1
-        2. event 2
-    10. October
-      These are all the events for October:
-        1. event 1
-        2. event 2
-    11. November
-      These are all the events for November:
-        1. event 1
-        2. event 2
-    12. December
-      These are all the events for December:
-        1. event 1
-        2. event 2
-    DOC
+    # puts <<-DOC 
+    # These are all the events for the year
+    # 01. January
+    #   These are all the events for January:
+    #     1. event 1
+    #     2. event 2
+    # 02. Feburary
+    #   These are all the events for Feburary:
+    #     1. event 1
+    #     2. event 2
+    # 03. March
+    #   These are all the events for March:
+    #     1. event 1
+    #     2. event 2
+    # 04. April
+    #   These are all the events for April:
+    #     1. event 1
+    #     2. event 2
+    # 05. May
+    #   These are all the events for May:
+    #     1. event 1
+    #     2. event 2
+    # 06. June
+    #   These are all the events for June:
+    #     1. event 1
+    #     2. event 2
+    # 07. July
+    #   These are all the events for July:
+    #     1. event 1
+    #     2. event 2
+    # 08. August
+    #   These are all the events for August:
+    #     1. event 1
+    #     2. event 2
+    # 09. September
+    #   These are all the events for September:
+    #     1. event 1
+    #     2. event 2
+    # 10. October
+    #   These are all the events for October:
+    #     1. event 1
+    #     2. event 2
+    # 11. November
+    #   These are all the events for November:
+    #     1. event 1
+    #     2. event 2
+    # 12. December
+    #   These are all the events for December:
+    #     1. event 1
+    #     2. event 2
+    # DOC
     
     event_1 = self.new
     event_1.month = "January"
