@@ -15,7 +15,7 @@ class TcoEvents::CLI
       while user_input != "exit"
         puts "Type in the month you would like to see events for in mm format(i.e: 01),or type 'annual events' for all events or type 'exit':"
         user_input = gets.strip.downcase
-        if user_input_to.i > 0
+        if user_input.to_i > 0
           puts @events[user_input.to_i-1]
           day
         elsif user_input == "annual events"
