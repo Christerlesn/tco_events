@@ -2,6 +2,7 @@ class TcoEvents::CLI
   
   def call
     puts "Welcome to Tuolumne County Events Page!"
+    list_events
     month_events
     goodbye
   end
@@ -20,8 +21,9 @@ class TcoEvents::CLI
         input = gets.strip.downcase
         
         if input.to_i > 0
-          puts @events[input.to_i-1]
-          #day
+          m_event = @events[input.to_i-1]
+          puts "#{m_event.month}: #{m_event.info}. For more information, go to #{m_event.url}"
+          day
         elsif input == "annual events"
           list_events
         else
@@ -30,74 +32,6 @@ class TcoEvents::CLI
       end
     end
           
-          
-          
-  #     case user_input
-  #     when "01"
-  #       puts "These are all the events for January:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "02"
-  #       puts "These are all the events for Feburary:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "03"
-  #       puts "These are all the events for March:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "04"
-  #       puts "These are all the events for April:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "05"
-  #       puts "These are all the events for May:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "06"
-  #       puts "These are all the events for June:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "07"
-  #       puts "These are all the events for July:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "08"
-  #       puts "These are all the events for August:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "09"
-  #       puts "These are all the events for September:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "10"
-  #       puts "These are all the events for October:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "11"
-  #       puts "These are all the events for November:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "12"
-  #       puts "These are all the events for December:
-  #       1. event 1
-  #       2. event 2"
-  #       day
-  #     when "annual events"
-  #       list_events
-  #     end
-  #   end
-  # end
     
     def day
       input = nil 
