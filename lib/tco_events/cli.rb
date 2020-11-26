@@ -14,6 +14,20 @@ class TcoEvents::CLI
     end
   end
 
+  
+  def day_event
+    user_input = nil
+      while user_input != "exit"
+      puts "Type in the day you would like to see events ranging from 01-31, or type exit to return to the main menu:"
+      user_input = gets.strip.downcase
+        if user_input == "number"
+          puts "testing"
+        else
+        end
+      end
+    end
+  end
+
   def month_events
     input = nil
     while input != "exit"
@@ -22,17 +36,13 @@ class TcoEvents::CLI
       if input.to_i > 0
         m_event = @events[input.to_i-1]
         puts "#{m_event.month}: #{m_event.day}. For more information, go to #{m_event.url}"
+        day_event
       elsif input == "annual events"
         list_events
       else
         "Please try again"
       end
     end
-  end
-  
-  def day_event
-    puts "testing for now"
-  end
 
   def goodbye
     puts "Thanks for visiting, come back soon!"
