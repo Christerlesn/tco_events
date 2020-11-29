@@ -8,6 +8,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     coderay (1.1.3)
+    diff-lcs (1.4.4)
     method_source (1.0.0)
     mini_portile2 (2.4.0)
     nokogiri (1.10.10)
@@ -16,6 +17,19 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     rake (10.5.0)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-core (3.10.0)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-support (3.10.0)
 
 PLATFORMS
   ruby
@@ -24,6 +38,7 @@ DEPENDENCIES
   bundler (~> 2.0)
   pry
   rake (~> 10.0)
+  rspec
   tco_events!
 
 BUNDLED WITH
