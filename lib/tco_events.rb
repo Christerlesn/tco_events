@@ -1,4 +1,7 @@
+require "nokogiri"
+require "pry"
 require_relative "./tco_events/version"
+
 
 module TcoEvents
   class Error < StandardError; end
